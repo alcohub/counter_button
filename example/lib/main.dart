@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: CounterButton(
-            loading: true,
+            loading: false,
             onChange: (int val) {
               print(val);
               setState(() {
@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
             count: _counterValue,
             countColor: Colors.purple,
             buttonColor: Colors.purpleAccent,
-            progressColor: Colors.grey.shade700,
+            progressColor: Colors.purpleAccent,
           ),
         ),
       ),
