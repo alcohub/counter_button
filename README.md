@@ -5,8 +5,6 @@
 Counter Button is a flutter library that allows you to create a button with animation effects when you increase or decrease the counter value.
 
 
-[Web Demo for LikeButton](https://fluttercandies.github.io/like_button/)
-
 ## Screenshots
 
 ![Demo](screenshots/demo.gif "counter button") ![Loading demo](screenshots/loading-demo.gif "counter button")
