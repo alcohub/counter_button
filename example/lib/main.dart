@@ -31,7 +31,6 @@ class _MyAppState extends State<MyApp> {
           child: CounterButton(
             loading: false,
             onChange: (int val) {
-              print(val);
               setState(() {
                 _counterValue = val;
               });

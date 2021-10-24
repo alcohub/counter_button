@@ -4,7 +4,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+///Counter button class
 class CounterButton extends StatefulWidget {
+  ///Constructor for the counter button
+  const CounterButton(
+      {Key? key,
+      required this.count,
+      required this.onChange,
+      required this.loading,
+      this.countColor = Colors.black,
+      this.addIcon = const Icon(Icons.add),
+      this.removeIcon = const Icon(Icons.remove),
+      this.buttonColor = Colors.black,
+      this.progressColor = Colors.black})
+      : super(key: key);
+
   ///Value of the counter displayed in the center
   final int count;
 
@@ -30,18 +44,6 @@ class CounterButton extends StatefulWidget {
   ///Remove button icon
   ///default: Icons.remove
   final Icon removeIcon;
-
-  const CounterButton(
-      {Key? key,
-      required this.count,
-      required this.onChange,
-      required this.loading,
-      this.countColor = Colors.black,
-      this.addIcon = const Icon(Icons.add),
-      this.removeIcon = const Icon(Icons.remove),
-      this.buttonColor = Colors.black,
-      this.progressColor = Colors.black})
-      : super(key: key);
 
   @override
   _AnimatedCounterState createState() => _AnimatedCounterState();

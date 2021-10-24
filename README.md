@@ -1,8 +1,15 @@
 # counter_button
 
-[![pub package](https://img.shields.io/badge/pub-0.0.1-green.svg)](https://pub.dartlang.org/packages/counter_button)
+[![pub package](https://img.shields.io/badge/pub-0.0.1-green.svg)](https://pub.dartlang.org/packages/counter_button) [![GitHub stars](https://img.shields.io/github/stars/alcohub/counter_button)](https://github.com/alcohub/counter_button/stargazers) [![GitHub forks](https://img.shields.io/github/forks/alcohub/counter_button)](https://github.com/alcohub/counter_button/network)  [![GitHub license](https://img.shields.io/github/license/alcohub/counter_button)](https://github.com/alcohub/counter_button/blob/master/LICENSE)  [![GitHub issues](https://img.shields.io/github/issues/alcohub/counter_button)](https://github.com/alcohub/counter_button/issues)
 
-A Flutter plugin for animated counter button group.
+Counter Button is a flutter library that allows you to create a button with animation effects when you increase or decrease the counter value.
+
+
+[Web Demo for LikeButton](https://fluttercandies.github.io/like_button/)
+
+## Screenshots
+
+![Demo](screenshots/demo.gif "counter button") ![Loading demo](screenshots/loading-demo.gif "counter button")
 
 ## Installing
 
@@ -14,49 +21,39 @@ dependencies:
 ### Import
 
 ```dart
-import 'package:unique_identifier/unique_identifier.dart';
+import 'package:counter_button/counter_button.dart';
 ```
 
 ## How To Use
 
+```dart
+CounterButton(
+  loading: false,
+  onChange: (int val) {
+    setState(() {
+      _counterValue = val;
+    });
+  },
+  count: _counterValue,
+  countColor: Colors.purple,
+  buttonColor: Colors.purpleAccent,
+  progressColor: Colors.purpleAccent,
+),
 ```
- dart String _identifier = 'Unknown';
 
- @override
- void initState() {
-   super.initState();
-   initUniqueIdentifierState();
- }
 
- Future<void> initUniqueIdentifierState() async {
-   String identifier;
-   try {
-     identifier = await UniqueIdentifier.serial;
-   } on PlatformException {
-     identifier = 'Failed to get Unique Identifier';
-   }
+## parameters
+| parameter                  | description                                                                           | default                   |
+| -------------------------- | ------------------------------------------------------------------------------------- | ------------------------- |
+| count                      | Value of the counter                                                                  |                           |
+| countColor                 | Color of the counter                                                                  | Colors.black              |
+| onChange                   | Value change callback when the buttons are pressed                                    |                           |
+| loading                    | For showing the linear progress indicator                                             |                           |
+| progressColor              | Color of the progress indicator                                                       | Colors.black              |
+| buttonColor                | Color of the icon button                                                              | Colors.black              |
+| addIcon                    | Add button icon          |                                                            | const Icon(Icons.add)     |
+| removeIcon                 | Remove button icon                                                                    | const Icon(Icons.remove)  |
 
-   if (!mounted) return;
-
-   setState(() {
-     _identifier = identifier;
-   });
- }
-
- @override
- Widget build(BuildContext context) {
-   return new MaterialApp(
-     home: new Scaffold(
-       appBar: new AppBar(
-         title: const Text('Plugin example app'),
-       ),
-       body: new Center(
-         child: new Text('Running on device with id: $_identifier\n'),
-       ),
-     ),
-   );
- }
-```
 
 ## Bugs & Requests
 
@@ -72,4 +69,3 @@ For help on editing plugin code, view the [documentation](https://flutter.io/pla
 ## License
 
 MIT License
-
