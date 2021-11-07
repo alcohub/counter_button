@@ -12,7 +12,7 @@ Counter Button is a flutter library that allows you to create a button with anim
 
 ```yaml
 dependencies:
-  counter_button: ^1.0.0
+  counter_button: ^1.0.1
 ```
 
 ### Import

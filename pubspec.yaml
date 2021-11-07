@@ -1,6 +1,6 @@
 name: counter_button
 description: Counter Button is a flutter library that allows you to create a button with animation effects when you increase or decrease the counter value.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/alcohub/counter_button
 
 environment:
