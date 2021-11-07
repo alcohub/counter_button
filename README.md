@@ -1,12 +1,12 @@
 # counter_button
 
-[![pub package](https://img.shields.io/pub/v/alcohub/counter_button.svg)](https://pub.dartlang.org/packages/counter_button) [![GitHub stars](https://img.shields.io/github/stars/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/stargazers) [![GitHub forks](https://img.shields.io/github/forks/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/network)  [![GitHub license](https://img.shields.io/github/license/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/blob/master/LICENSE)  [![GitHub issues](https://img.shields.io/github/issues/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/issues)
+[![pub package](https://img.shields.io/pub/v/counter_button.svg)](https://pub.dartlang.org/packages/counter_button) [![GitHub stars](https://img.shields.io/github/stars/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/stargazers) [![GitHub forks](https://img.shields.io/github/forks/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/network)  [![GitHub license](https://img.shields.io/github/license/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/blob/main/LICENSE)  [![GitHub issues](https://img.shields.io/github/issues/alcohub/counter_button.svg)](https://github.com/alcohub/counter_button/issues)
 
 Counter Button is a flutter library that allows you to create a button with animation effects when you increase or decrease the counter value.
 
 ## Screenshots
 
-![Demo](screenshots/demo.gif "counter button") ![Loading demo](screenshots/loading-demo.gif "counter button")
+![Demo](https://github.com/alcohub/counter_button/blob/main/screenshots/demo.gif?raw=true "counter button") ![Loading demo](https://github.com/alcohub/counter_button/blob/main/screenshots/loading-demo.gif?raw=true "counter button")
 
 ## Installing
 
