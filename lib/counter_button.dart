@@ -67,7 +67,8 @@ class _AnimatedCounterState extends State<CounterButton> {
             children: <Widget>[
               if (widget.loading)
                 LinearProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(widget.progressColor),
+                  valueColor:
+                      AlwaysStoppedAnimation<Color>(widget.progressColor),
                   backgroundColor: Colors.transparent,
                 ),
               Padding(
@@ -91,22 +92,29 @@ class _AnimatedCounterState extends State<CounterButton> {
                     ),
                     AnimatedSwitcher(
                       duration: const Duration(milliseconds: 250),
-                      layoutBuilder: (Widget? currentChild, List<Widget> previousChildren) {
+                      layoutBuilder: (Widget? currentChild,
+                          List<Widget> previousChildren) {
                         return currentChild!;
                       },
-                      transitionBuilder: (Widget child, Animation<double> animation) {
-                        final Animation<Offset> inAnimation =
-                            Tween<Offset>(begin: const Offset(1.0, 0.0), end: Offset.zero).animate(animation);
-                        final Animation<Offset> outAnimation =
-                            Tween<Offset>(begin: const Offset(-1.0, 0.0), end: Offset.zero).animate(animation);
+                      transitionBuilder:
+                          (Widget child, Animation<double> animation) {
+                        final Animation<Offset> inAnimation = Tween<Offset>(
+                                begin: const Offset(1.0, 0.0), end: Offset.zero)
+                            .animate(animation);
+                        final Animation<Offset> outAnimation = Tween<Offset>(
+                                begin: const Offset(-1.0, 0.0),
+                                end: Offset.zero)
+                            .animate(animation);
 
                         if (child.key.toString() == widget.count.toString()) {
                           return ClipRect(
-                            child: SlideTransition(position: inAnimation, child: child),
+                            child: SlideTransition(
+                                position: inAnimation, child: child),
                           );
                         } else {
                           return ClipRect(
-                            child: SlideTransition(position: outAnimation, child: child),
+                            child: SlideTransition(
+                                position: outAnimation, child: child),
                           );
                         }
                       },
@@ -117,7 +125,10 @@ class _AnimatedCounterState extends State<CounterButton> {
                         child: Center(
                           child: Text(
                             widget.count.toString(),
-                            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, color: widget.countColor),
+                            style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w600,
+                                color: widget.countColor),
                           ),
                         ),
                       ),
